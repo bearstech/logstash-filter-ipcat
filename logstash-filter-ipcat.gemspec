@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Logstash filter for the ipcat project."
   s.authors = ["athoune"]
   s.email = 'mlecarme@bearstech.com'
-  s.homepage = "https://github/bearstech/logstash-filter-ipcat"
+  s.homepage = "https://githubi.com/bearstech/logstash-filter-ipcat"
   s.require_paths = ["lib"]
 
   # Files
