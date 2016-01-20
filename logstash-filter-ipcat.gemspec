@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'logstash-filter-ipcat'
-  s.version = '0.1.1'
+  s.version = '0.1.2'
   s.licenses = ['Apache License (2.0)']
   s.summary = "Is this IP came from a datacenter?"
   s.description = "Logstash filter for the ipcat project."
