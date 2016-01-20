@@ -3,7 +3,7 @@ require 'spec_helper'
 require 'logstash/filters/ipcat'
 
 describe LogStash::Filters::Ipcat do
-  describe 'Set to Hello World' do
+  describe 'Ipcat filter' do
     let(:config) do
       <<-CONFIG
       filter {
@@ -20,6 +20,10 @@ describe LogStash::Filters::Ipcat do
 
     sample('client' => '54.186.35.228') do
       expect(subject['ipcat']).to eq('http://www.amazon.com/aws/')
+    end
+
+    sample('client' => nil) do
+      expect(subject['ipcat']).to eq(nil)
     end
   end
 end

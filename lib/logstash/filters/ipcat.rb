@@ -28,7 +28,8 @@ class LogStash::Filters::Ipcat < LogStash::Filters::Base
   public
 
   def filter(event)
-    event[@target] = @datacenters.find(event[@source]) if @source
+    d = @datacenters.find(event[@source])
+    event[@target] = d unless d.nil?
 
     # filter_matched should go in the last line of our successful code
     filter_matched(event)
