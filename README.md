@@ -1,3 +1,9 @@
+# IPcat filter for Logstash
+
+This filter use [ipcat](https://github.com/client9/ipcat/) data to guess if an IP came from a datacenter, from wich company.
+
+This plugin uses [ipcat_jruby](https://github.com/athoune/ipcat_jruby) 50% ruby, 50% java, 100% jruby.
+
 # Logstash Plugin
 
 [![Build
