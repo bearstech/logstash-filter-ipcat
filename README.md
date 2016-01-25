@@ -4,6 +4,35 @@ This filter use [ipcat](https://github.com/client9/ipcat/) data to guess if an I
 
 This plugin uses [ipcat_jruby](https://github.com/athoune/ipcat_jruby) 50% ruby, 50% java, 100% jruby.
 
+## Example
+
+```
+input {
+    # get some apache log
+}
+
+filter {
+
+    ipcat {
+       source => "clientip"
+       #default target is "ipcat"
+    }
+
+}
+
+output {
+    if [ipcat] {
+        file {
+            path => "/var/log/logstash/ipcat.log"
+        }
+    }
+}
+```
+
+
+
+
+
 # Logstash Plugin
 
 [![Build
