@@ -22,6 +22,9 @@ describe LogStash::Filters::Ipcat do
       expect(subject['ipcat']).to eq('http://www.amazon.com/aws/')
     end
 
+    sample('client' => ['54.186.35.228', '64.90.39.153']) do
+      expect(subject['ipcat']).to eq('http://www.amazon.com/aws/')
+    end
     sample('client' => nil) do
       expect(subject['ipcat']).to eq(nil)
     end

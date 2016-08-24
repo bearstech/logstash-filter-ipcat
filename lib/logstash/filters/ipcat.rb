@@ -28,7 +28,9 @@ class LogStash::Filters::Ipcat < LogStash::Filters::Base
   public
 
   def filter(event)
-    d = @datacenters.find(event[@source])
+    ip = event[@source]
+    ip = ip[0] if ip.instance_of? Array
+    d = @datacenters.find(ip)
     event[@target] = d
 
     # filter_matched should go in the last line of our successful code
